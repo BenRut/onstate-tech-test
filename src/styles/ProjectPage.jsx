@@ -15,6 +15,9 @@ const Services = styled.ul`
 	list-style: none;
 	text-align: left;
 	min-width: 200px;
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 const Project = styled.div`
@@ -24,6 +27,9 @@ const Project = styled.div`
 const ProjectWrapper = styled.div`
 	display: flex;
 	margin-bottom: 150px;
+	@media (max-width: 768px) {
+		margin-bottom: 40px;
+	}
 `;
 
 const ProjectDescription = styled.p`
@@ -54,21 +60,19 @@ const TestimonyWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 80px;
+	justify-content: center;
+	text-align: center;
 `;
 
-const Testimony = styled.span`
-	color: #000000;
-	font-family: 'Inter-SemiBold';
-	font-size: 44px;
-	text-align: center;
-	width: 60vw;
-	margin-bottom: 40px;
-`;
 const Author = styled.span`
 	color: #9b9b9b;
 	font-family: 'Inter-Regular';
 	font-size: 14px;
 	line-height: 24px;
+	margin-top: 40px;
+	@media (max-width: 400px) {
+		margin-top: 20px;
+	}
 `;
 
 const ProjectImage = styled.div`
@@ -76,11 +80,17 @@ const ProjectImage = styled.div`
 	width: 1366px;
 	height: 900px;
 	margin-bottom: 80px;
+	@media (max-width: 400px) {
+		width: 100vw;
+	}
 `;
 
 const LargeProjectImage = styled(ProjectImage)`
 	height: 2600px;
 	margin-bottom: 150px;
+	@media (max-width: 768px) {
+		margin-bottom: 40px;
+	}
 `;
 
 const MediumProjectImage = styled(LargeProjectImage)`
@@ -101,7 +111,6 @@ export {
 	Successes,
 	SuccessPoint,
 	TestimonyWrapper,
-	Testimony,
 	Author,
 	ProjectImage,
 	LargeProjectImage,

@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ProjectPage from './components/ProjectPage';
 import GlobalStyles from './styles/GlobalStyles';
 import { ProjectPageWrapper } from './styles/ProjectPage';
+import LogoBanner from './components/LogoBanner';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 				<ProjectPage />
 				<Footer />
 			</ProjectPageWrapper>
+			<LogoBanner />
 		</div>
 	);
 }

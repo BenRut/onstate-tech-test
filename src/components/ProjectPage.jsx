@@ -111,11 +111,11 @@ class ProjectPage extends Component {
 				</Successes>
 
 				<TestimonyWrapper>
-					<Testimony>
+					<BigBlackTitle>
 						&ldquo;Onstate painlessly migrated us from Squarespace to Shopify,
 						giving us a richer online experience for us to engage our customers
 						more with our brand&rdquo;
-					</Testimony>
+					</BigBlackTitle>
 					<Author>Bo van Langeveld, Co-Founder at Baudin & Lange</Author>
 				</TestimonyWrapper>
 			</>
