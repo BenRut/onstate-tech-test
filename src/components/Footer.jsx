@@ -1,6 +1,6 @@
 import React from 'react';
-import { NextProject, ArrowWrapper } from '../styles/Footer';
-import { BigBlackTitle, BigGreyTitle } from '../styles/Text';
+import { ArrowWrapper, NextProject } from '../styles/Footer';
+import { BigBlackTitle, BigGreyTitle, RightParagraph } from '../styles/Text';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 

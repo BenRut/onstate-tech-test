@@ -14,7 +14,7 @@ const Services = styled.ul`
 	color: #9b9b9b;
 	list-style: none;
 	text-align: left;
-	width: 200px;
+	min-width: 200px;
 `;
 
 const Project = styled.div`
@@ -23,6 +23,7 @@ const Project = styled.div`
 
 const ProjectWrapper = styled.div`
 	display: flex;
+	margin-bottom: 150px;
 `;
 
 const ProjectDescription = styled.p`
@@ -48,19 +49,6 @@ const SuccessPoint = styled.div`
 	flex-direction: column;
 `;
 
-const SuccessHeading = styled.span`
-	color: #000000;
-	font-family: 'Inter-SemiBold';
-	font-size: 44px;
-	margin-bottom: 20px;
-`;
-
-const SuccessTagline = styled.span`
-	color: #9b9b9b;
-	font-family: 'Inter-Regular';
-	font-size: 18px;
-`;
-
 const TestimonyWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -83,6 +71,27 @@ const Author = styled.span`
 	line-height: 24px;
 `;
 
+const ProjectImage = styled.div`
+	background: green;
+	width: 1366px;
+	height: 900px;
+	margin-bottom: 80px;
+`;
+
+const LargeProjectImage = styled(ProjectImage)`
+	height: 2600px;
+	margin-bottom: 150px;
+`;
+
+const MediumProjectImage = styled(LargeProjectImage)`
+	height: 1537px;
+`;
+
+const ImageWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+`;
+
 export {
 	ProjectPageWrapper,
 	Services,
@@ -91,9 +100,11 @@ export {
 	ProjectDescription,
 	Successes,
 	SuccessPoint,
-	SuccessHeading,
-	SuccessTagline,
 	TestimonyWrapper,
 	Testimony,
-	Author
+	Author,
+	ProjectImage,
+	LargeProjectImage,
+	MediumProjectImage,
+	ImageWrapper
 };

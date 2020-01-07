@@ -20,4 +20,32 @@ const BigGreyTitle = styled.h2`
 	margin-top: 0px;
 `;
 
-export { BigGreyTitle, BigBlackTitle };
+const BlackSubHeading = styled.h3`
+	color: #000;
+	font-family: 'Inter-SemiBold';
+	font-size: 26px;
+	line-height: 55px;
+`;
+
+const SmallGreyText = styled.span`
+	color: #9b9b9b;
+	font-family: 'Inter-Regular';
+	font-size: 18px;
+`;
+
+const LeftParagraph = styled.div`
+	width: 40%;
+	margin-bottom: 80px;
+`;
+const RightParagraph = styled(LeftParagraph)`
+	margin-left: 50vw;
+`;
+
+export {
+	BigGreyTitle,
+	BigBlackTitle,
+	BlackSubHeading,
+	SmallGreyText,
+	LeftParagraph,
+	RightParagraph
+};
