@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import LandingPage from './components/LandingPage';
+import ProjectPage from './components/ProjectPage';
 import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 		<div className="App">
 			<GlobalStyles />
 			<Header />
-			<LandingPage />
+			<ProjectPage />
 		</div>
 	);
 }
