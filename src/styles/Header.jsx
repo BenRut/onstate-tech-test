@@ -19,7 +19,7 @@ const RightContent = styled.div`
 `;
 const Hamburger = styled.div`
 	background-color: red;
-	color: black;
+	color: white;
 	height: 50px;
 	width: 50px;
 	display: flex;
@@ -34,4 +34,10 @@ const PhoneNumber = styled.span`
 	font-family: 'Inter-SemiBold';
 `;
 
-export { Nav, RightContent, Hamburger, PhoneNumber, Logo };
+const BelowHeaderImage = styled.div`
+	height: 530px;
+	background: green;
+	margin-bottom: 60px;
+`;
+
+export { Nav, RightContent, Hamburger, PhoneNumber, Logo, BelowHeaderImage };
