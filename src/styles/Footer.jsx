@@ -14,6 +14,10 @@ const ArrowWrapper = styled.div`
 	height: 60px;
 	width: 60px;
 	font-size: 44px;
+	transition: all 0.4s ease-in-out;
+	&:hover {
+		transform: scale(1.3);
+	}
 `;
 
 export { NextProject, ArrowWrapper };

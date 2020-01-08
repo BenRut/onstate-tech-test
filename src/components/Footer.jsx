@@ -7,7 +7,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 const Footer = () => {
 	return (
 		<div>
-			<NextProject>
+			<NextProject data-aos="fade-right" data-aos-duration="1000">
 				<div>
 					<BigBlackTitle>Next Project</BigBlackTitle>
 					<BigGreyTitle>Brown Thomas</BigGreyTitle>

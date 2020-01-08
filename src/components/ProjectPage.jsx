@@ -42,7 +42,11 @@ class ProjectPage extends Component {
 	render() {
 		return (
 			<>
-				<ProjectWrapper>
+				<ProjectWrapper
+					data-aos="fade-up"
+					data-aos-anchor-placement="bottom-bottom"
+					data-aos-duration="2000"
+				>
 					<Services>
 						<li>Shopify</li>
 						<li>Design & UX</li>
@@ -81,7 +85,11 @@ class ProjectPage extends Component {
 					<LargeProjectImage />
 				</ImageWrapper>
 
-				<LeftParagraph>
+				<LeftParagraph
+					data-aos="fade-right"
+					data-aos-duration="1000"
+					data-aos-easing="ease-in-sine"
+				>
 					<BlackSubHeading>Unique menu structure</BlackSubHeading>
 					<SmallGreyText>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
@@ -94,7 +102,11 @@ class ProjectPage extends Component {
 					<ProjectImage />
 				</ImageWrapper>
 
-				<RightParagraph>
+				<RightParagraph
+					data-aos="fade-left"
+					data-aos-duration="700"
+					data-aos-easing="ease-in-sine"
+				>
 					<BlackSubHeading>Component based design</BlackSubHeading>
 					<SmallGreyText>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga iste
@@ -109,7 +121,11 @@ class ProjectPage extends Component {
 				</ImageWrapper>
 
 				<Responsive displayIn={['laptop']}>
-					<Successes>
+					<Successes
+						data-aos="fade-zoom-in"
+						data-aos-easing="ease-in-back"
+						data-aos-duration="7000"
+					>
 						{this.state.successes.map(success => {
 							return (
 								<SuccessPoint>
@@ -122,16 +138,33 @@ class ProjectPage extends Component {
 				</Responsive>
 
 				<Responsive displayIn={['tablet', 'mobile']}>
-					<Slider items={this.state.successes} />
+					<Slider
+						data-aos="fade-zoom-in"
+						data-aos-easing="ease-in-back"
+						data-aos-duration="1000"
+						items={this.state.successes}
+					/>
 				</Responsive>
 
 				<TestimonyWrapper>
-					<BigBlackTitle>
+					<hr />
+					<BigBlackTitle
+						data-aos="fade-up"
+						data-aos-anchor-placement="bottom-bottom"
+						data-aos-duration="2000"
+					>
 						&ldquo;Onstate painlessly migrated us from Squarespace to Shopify,
 						giving us a richer online experience for us to engage our customers
 						more with our brand&rdquo;
 					</BigBlackTitle>
-					<Author>Bo van Langeveld, Co-Founder at Baudin & Lange</Author>
+					<Author
+						data-aos="fade-up"
+						data-aos-anchor-placement="bottom-bottom"
+						data-aos-duration="2000"
+					>
+						Bo van Langeveld, Co-Founder at Baudin & Lange
+					</Author>
+					<hr />
 				</TestimonyWrapper>
 			</>
 		);
