@@ -7,14 +7,24 @@ import {
 	Logo,
 	BelowHeaderImage
 } from '../styles/Header';
+import Menu from './Menu';
 import LogoURL from '../img/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 class Header extends Component {
+	state = {
+		showMenu: false
+	};
+	handleClick = e => {
+		this.setState(currentState => {
+			return { showMenu: !currentState.showMenu };
+		});
+	};
 	render() {
 		return (
 			<>
+				{this.state.showMenu && <Menu handleClick={this.handleClick} />}
 				<Nav>
 					<Logo
 						id="Logo"
@@ -31,7 +41,7 @@ class Header extends Component {
 						data-aos-offset="0"
 					>
 						<PhoneNumber>+44 (0)113 386 0020</PhoneNumber>
-						<Hamburger>
+						<Hamburger name="menu" onClick={this.handleClick}>
 							<FontAwesomeIcon icon={faBars} />
 						</Hamburger>
 					</RightContent>

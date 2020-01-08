@@ -45,7 +45,11 @@ const PhoneNumber = styled.span`
 
 const BelowHeaderImage = styled.div`
 	height: 530px;
-	background: green;
+	background-position: center center;
+	background-size: cover;
+	background: url('http://via.placeholder.com/1600x530');
+	background-attachment: fixed;
+	background-position-y: center;
 	margin-bottom: 60px;
 	@media (max-width: 768px) {
 		margin-bottom: 30px;

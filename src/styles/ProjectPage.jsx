@@ -15,7 +15,7 @@ const Services = styled.ul`
 	list-style: none;
 	text-align: left;
 	min-width: 200px;
-	@media (max-width: 768px) {
+	@media (max-width: 1366px) {
 		display: none;
 	}
 `;
@@ -86,10 +86,9 @@ const Author = styled.span`
 	}
 `;
 
-const ProjectImage = styled.div`
+const ProjectImage = styled.img`
 	background: green;
-	width: 1366px;
-	height: 900px;
+
 	margin-bottom: 80px;
 	@media (max-width: 400px) {
 		width: 100vw;
@@ -97,7 +96,6 @@ const ProjectImage = styled.div`
 `;
 
 const LargeProjectImage = styled(ProjectImage)`
-	height: 2600px;
 	margin-bottom: 150px;
 	@media (max-width: 768px) {
 		margin-bottom: 40px;
@@ -112,7 +110,12 @@ const ImageWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 `;
-
+const CarouselWrapper = styled.div`
+	margin-bottom: 80px;
+	@media (max-width: 768px) {
+		margin-bottom: 30px;
+	}
+`;
 export {
 	ProjectPageWrapper,
 	Services,
@@ -127,5 +130,6 @@ export {
 	LargeProjectImage,
 	MediumProjectImage,
 	ImageWrapper,
-	SliderWrapper
+	SliderWrapper,
+	CarouselWrapper
 };

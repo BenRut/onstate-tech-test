@@ -13,7 +13,8 @@ import {
 	ProjectImage,
 	LargeProjectImage,
 	MediumProjectImage,
-	ImageWrapper
+	ImageWrapper,
+	CarouselWrapper
 } from '../styles/ProjectPage';
 import {
 	BigBlackTitle,
@@ -24,12 +25,8 @@ import {
 	LeftParagraph
 } from '../styles/Text';
 
-import {
-	Responsive,
-	isMobileDevice,
-	isTabletDevice,
-	isLaptopDevice
-} from 'responsive-react';
+import { Responsive } from 'responsive-react';
+import ImageCarousel from './ImageCarousel';
 
 class ProjectPage extends Component {
 	state = {
@@ -72,17 +69,27 @@ class ProjectPage extends Component {
 				</ProjectWrapper>
 
 				<ImageWrapper>
-					<ProjectImage />
+					<ProjectImage src="http://via.placeholder.com/1366x900" />
 				</ImageWrapper>
 
 				<ImageWrapper>
-					<ProjectImage />
+					<ProjectImage src="http://via.placeholder.com/1366x900" />
 				</ImageWrapper>
 
-				<ImageWrapper>{/* <Slider /> */}</ImageWrapper>
+				<ImageWrapper>
+					<CarouselWrapper>
+						<ImageCarousel
+							urls={[
+								'http://via.placeholder.com/1366x900',
+								'http://via.placeholder.com/1366x900',
+								'http://via.placeholder.com/1366x900'
+							]}
+						/>
+					</CarouselWrapper>
+				</ImageWrapper>
 
 				<ImageWrapper>
-					<LargeProjectImage />
+					<LargeProjectImage src="http://via.placeholder.com/1366x2600" />
 				</ImageWrapper>
 
 				<LeftParagraph
@@ -99,7 +106,7 @@ class ProjectPage extends Component {
 					</SmallGreyText>
 				</LeftParagraph>
 				<ImageWrapper>
-					<ProjectImage />
+					<ProjectImage src="http://via.placeholder.com/1366x900" />
 				</ImageWrapper>
 
 				<RightParagraph
@@ -117,7 +124,7 @@ class ProjectPage extends Component {
 				</RightParagraph>
 
 				<ImageWrapper>
-					<MediumProjectImage />
+					<MediumProjectImage src="http://via.placeholder.com/1366x1537" />
 				</ImageWrapper>
 
 				<Responsive displayIn={['laptop']}>
