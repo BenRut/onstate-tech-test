@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Slider from './Slider';
+
 import {
 	Services,
 	ProjectWrapper,
@@ -7,7 +9,6 @@ import {
 	Successes,
 	SuccessPoint,
 	TestimonyWrapper,
-	Testimony,
 	Author,
 	ProjectImage,
 	LargeProjectImage,
@@ -23,7 +24,21 @@ import {
 	LeftParagraph
 } from '../styles/Text';
 
+import {
+	Responsive,
+	isMobileDevice,
+	isTabletDevice,
+	isLaptopDevice
+} from 'responsive-react';
+
 class ProjectPage extends Component {
+	state = {
+		successes: [
+			{ heading: '300', text: 'Increase in conversion rate' },
+			{ heading: '50k', text: 'Visitors in the first 3 months' },
+			{ heading: 'Increase', text: 'In channel share' }
+		]
+	};
 	render() {
 		return (
 			<>
@@ -60,9 +75,7 @@ class ProjectPage extends Component {
 					<ProjectImage />
 				</ImageWrapper>
 
-				<ImageWrapper>
-					<ProjectImage />
-				</ImageWrapper>
+				<ImageWrapper>{/* <Slider /> */}</ImageWrapper>
 
 				<ImageWrapper>
 					<LargeProjectImage />
@@ -95,20 +108,22 @@ class ProjectPage extends Component {
 					<MediumProjectImage />
 				</ImageWrapper>
 
-				<Successes>
-					<SuccessPoint>
-						<BigBlackTitle>300%</BigBlackTitle>
-						<SmallGreyText>Increase in conversion rate</SmallGreyText>
-					</SuccessPoint>
-					<SuccessPoint>
-						<BigBlackTitle>50k</BigBlackTitle>
-						<SmallGreyText>Visitors in the first 3 months</SmallGreyText>
-					</SuccessPoint>
-					<SuccessPoint>
-						<BigBlackTitle>Increase</BigBlackTitle>
-						<SmallGreyText>In channel share</SmallGreyText>
-					</SuccessPoint>
-				</Successes>
+				<Responsive displayIn={['laptop']}>
+					<Successes>
+						{this.state.successes.map(success => {
+							return (
+								<SuccessPoint>
+									<BigBlackTitle>{success.heading}</BigBlackTitle>
+									<SmallGreyText>{success.text}</SmallGreyText>
+								</SuccessPoint>
+							);
+						})}
+					</Successes>
+				</Responsive>
+
+				<Responsive displayIn={['tablet', 'mobile']}>
+					<Slider items={this.state.successes} />
+				</Responsive>
 
 				<TestimonyWrapper>
 					<BigBlackTitle>

@@ -6,6 +6,7 @@ import ProjectPage from './components/ProjectPage';
 import GlobalStyles from './styles/GlobalStyles';
 import { ProjectPageWrapper } from './styles/ProjectPage';
 import LogoBanner from './components/LogoBanner';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 	return (

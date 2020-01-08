@@ -39,6 +39,10 @@ const ProjectDescription = styled.p`
 	line-height: 30px;
 `;
 
+const SliderWrapper = styled.div`
+	height: 150px;
+`;
+
 const Successes = styled.div`
 	background-color: white;
 	display: flex;
@@ -46,6 +50,10 @@ const Successes = styled.div`
 	align-items: center;
 	margin-bottom: 80px;
 	height: 150px;
+	@media (max-width: 768px) {
+		margin-top: 50px;
+		flex-direction: column;
+	}
 `;
 
 const SuccessPoint = styled.div`
@@ -53,6 +61,9 @@ const SuccessPoint = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	@media (max-width: 768px) {
+		padding: 20px;
+	}
 `;
 
 const TestimonyWrapper = styled.div`
@@ -115,5 +126,6 @@ export {
 	ProjectImage,
 	LargeProjectImage,
 	MediumProjectImage,
-	ImageWrapper
+	ImageWrapper,
+	SliderWrapper
 };
